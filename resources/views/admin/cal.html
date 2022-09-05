@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<h1>New</h1>
+
+				<form method="" enctype="multipart/form-data" id="addData" action="">  
+
+                  	<input type="text" placeholder="width" name="width" value="" class="width">
+                    <input type="text" placeholder="height" name="height" value="" class="height">
+                    <input type="text" placeholder="M_width" name="M_width" value="" class="M_width">
+                    <input type="text" placeholder="M_height" name="M_height" value="" class="M_height">     
+
+                          <button type="submit" class="glow-on-hover my-5">submit form</button>
+                    </form> 
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+		
+		$(document).on('click' , '.glow-on-hover' ,function(){
+
+			
+
+			var width=$(".width").val();
+			var height1=$(".height").val();
+			var M_width=$(".M_width").val();
+			var M_height=$(".M_height").val();
+
+			var height=height1*100
+
+			var result=(width*height)
+
+			var result1=(M_width*M_height)
+
+			var answer=result1/result
+
+			alert(Math.round(answer));
+			
+		});
+
+</script>
+</body>
+</html>
