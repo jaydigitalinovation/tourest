@@ -40,7 +40,7 @@
 							<div class="inner-service-info" data-aos="zoom-in" data-aos-easing="ease-out-cubic" data-aos-duration="2000">
 								
 								<h2>
-									{{$error}}
+									Tour Not Available
 								</h2>
 								
 								<button>

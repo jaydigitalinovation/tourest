@@ -466,9 +466,23 @@ class home_controller extends Controller
 
         elseif($package_name !='' AND $package_price !=''){
 
+            
+
             $package_data=DB::table('package')->where('id',$package_name)->where('price' ,'<=', $package_price)->paginate(2);
 
             $data['package_data']=$package_data;
+
+            if(count($package_data) ==1){
+
+                $data['pd']=1;
+
+
+            }else{
+
+                $data['pd']=0;
+
+
+            }
 
             $tour_type_data=DB::table('tour_type')->get();
 
@@ -505,6 +519,18 @@ class home_controller extends Controller
 
             $data['package_data']=$package_data;
 
+            if(count($package_data) ==1){
+
+                $data['pd']=1;
+
+
+            }else{
+
+                $data['pd']=0;
+
+
+            }
+
             $tour_type_data=DB::table('tour_type')->get();
 
             $data['tour_type_data']=$tour_type_data;
@@ -539,6 +565,18 @@ class home_controller extends Controller
             $package_data=DB::table('package')->where('price' ,'<=', $package_price)->where('tour_type_id',$package_travel_type)->paginate(2);
 
             $data['package_data']=$package_data;
+
+            if(count($package_data) ==1){
+
+                $data['pd']=1;
+
+
+            }else{
+
+                $data['pd']=0;
+
+
+            }
 
             $tour_type_data=DB::table('tour_type')->get();
 
@@ -575,6 +613,18 @@ class home_controller extends Controller
 
             $data['package_data']=$package_data;
 
+            if(count($package_data) ==1){
+
+                $data['pd']=1;
+
+
+            }else{
+
+                $data['pd']=0;
+
+
+            }
+
             $tour_type_data=DB::table('tour_type')->get();
 
             $data['tour_type_data']=$tour_type_data;
@@ -610,6 +660,18 @@ class home_controller extends Controller
 
             $data['package_data']=$package_data;
 
+            if(count($package_data) ==1){
+
+                $data['pd']=1;
+
+
+            }else{
+
+                $data['pd']=0;
+
+
+            }
+
             $tour_type_data=DB::table('tour_type')->get();
 
             $data['tour_type_data']=$tour_type_data;
@@ -644,6 +706,18 @@ class home_controller extends Controller
             $package_data=DB::table('package')->where('tour_type_id',$package_travel_type)->paginate(2);
 
             $data['package_data']=$package_data;
+
+            if(count($package_data) ==1){
+
+                $data['pd']=1;
+
+
+            }else{
+
+                $data['pd']=0;
+
+
+            }
 
             $tour_type_data=DB::table('tour_type')->get();
 
